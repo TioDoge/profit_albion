@@ -6,74 +6,35 @@
         <title>Profit capas</title>
     </head>
     <body>
-        <div class="row"><h3>PROFIT DE CAPAS</h3></div>
+        <div class="row"><h3>PROFIT DE MONTURAS</h3></div>
         <div class="row">
             <div class="col-md-12" id="">
-                <table class="table table-striped" id="table-capasfaccion">
+                <table class="table table-striped" id="table-monturas">
                     <colgroup>
-                        <col width="100px">
+                        <col width="200px">
                         <col width="200px">
                         <col width="200px">                            
                         <col width="200px">
                         <col width="200px">
                         <col width="200px">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>Ciudad</th>
-                            <th>Capa de Martlock</th>
-                            <th>Capa de Bridgewatch</th>
-                            <th>Capa de Thetford</th>
-                            <th>Capa de Fort Sterling</th>
-                            <th>Capa de Lymhurst</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="row"><h3>PRECIO CORAZONES</h3></div>
-        <div class="row">
-            <div class="col-md-12" id="">
-                <table class="dataTable no-footer" id="table-corazones">
-                    <colgroup>
-                        <col width="100px">
-                        <col width="200px">
-                        <col width="200px">                            
-                        <col width="200px">
                         <col width="200px">
                         <col width="200px">
                     </colgroup>
                     <thead>
                         <tr>
-                            <th>Ciudad</th>
-                            <th>Corazón de Piedra</th>
-                            <th>Corazón de Bestia</th>
-                            <th>Corazón de Vid</th>
-                            <th>Corazón de Montaña</th>
-                            <th>Corazón de Árbol</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="row"><h3>PRECIO CAPAS</h3></div>
-        <div class="row">
-            <div class="col-md-12" id="">
-                <table class="dataTable no-footer" id="table-capa">
-                    <colgroup>
-                        <col width="100px">
-                        <col width="200px">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>Ciudad</th>
-                            <th>Coste capa</th>
+                            <th>Montura</th>
+                            <th>Coste de cria</th>
+                            <th>Ciudad cria</th>
+                            <th>Coste de comida</th>
+                            <th>Ciudad comida</th>
+                            <th>Horas de crianza</th>
+                            <th>Coste de Recursos</th>
+                            <th>Ciudad Recursos</th>
+                            <th>Coste corazon</th>
+                            <th>Ciudad corazon</th>
+                            <th>Venta montura</th>
+                            <th>Ciudad venta</th>
+                            <th>Profit</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -107,9 +68,9 @@
         <script src="js/Plugins/js.tooltip.js" type="text/javascript"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>    
         <script src="js/APPComun.js" type="text/javascript"></script>
-        <script src="js/capas.js" type="text/javascript"></script>
+        <script src="js/monturas_r.js" type="text/javascript"></script>
         <script>
-            initTableCapasFacciones();
+            initTableMonturas();
         </script>
     </body>
 </html>

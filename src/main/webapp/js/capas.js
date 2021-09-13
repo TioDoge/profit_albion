@@ -2,11 +2,89 @@ function profitcapasf(){
     getJson("svl_profit", {accion: 'profit_capasf'}, true,
         function (data) {
             DT_Clear(_TEMP['table-capasfaccion']);
-            DT_CargarDatos(_TEMP['table-capasfaccion'], 0, data.length, data);
+            DT_CargarDatos(_TEMP['table-capasfaccion'], 0, 4, data);
+            var cora=data[5];
+            DT_Clear(_TEMP['table-corazones']);
+            DT_CargarDatos(_TEMP['table-corazones'], 0, cora.lengt, cora);
+            var capa=data[6];
+            DT_Clear(_TEMP['table-capa']);
+            DT_CargarDatos(_TEMP['table-capa'], 0, capa.lengt, capa);
         }
     );
 }
 function initTableCapasFacciones(){
+    if (_TEMP['table-corazones'] === undefined && document.getElementById('table-corazones')) {
+        var i = 0;
+        _TEMP['table-corazones'] = DT_init('table-corazones', {
+            "columnDefs": [
+                {
+                    "targets": i++,
+                    "data": "CIUDAD", //rut
+                    "render": function (data, type, full, meta) {
+                        return data;
+                    }
+                },
+                {
+                    "targets": i++,
+                    "data": "T1_FACTION_HIGHLAND_TOKEN_1", //rut
+                    "render": function (data, type, full, meta) {
+                        return data;
+                    }
+                },
+                {
+                    "targets": i++,
+                    "data": "T1_FACTION_STEPPE_TOKEN_1", //rut
+                    "render": function (data, type, full, meta) {
+                        return data;
+                    }
+                },
+                {
+                    "targets": i++,
+                    "data": "T1_FACTION_SWAMP_TOKEN_1", //rut
+                    "render": function (data, type, full, meta) {
+                        return data;
+                    }
+                },
+                {
+                    "targets": i++,
+                    "data": "T1_FACTION_MOUNTAIN_TOKEN_1", //rut
+                    "render": function (data, type, full, meta) {
+                        return data;
+                    }
+                },
+                {
+                    "targets": i++,
+                    "data": "T1_FACTION_FOREST_TOKEN_1", //rut
+                    "render": function (data, type, full, meta) {
+                        return data;
+                    }
+                }
+            ]
+        });
+    }
+    
+    if (_TEMP['table-capa'] === undefined && document.getElementById('table-capa')) {
+        var i = 0;
+        _TEMP['table-capa'] = DT_init('table-capa', {
+            "columnDefs": [
+                {
+                    "targets": i++,
+                    "data": "CIUDAD", //rut
+                    "render": function (data, type, full, meta) {
+                        return data;
+                    }
+                },
+                {
+                    "targets": i++,
+                    "data": "T4_CAPE", //rut
+                    "render": function (data, type, full, meta) {
+                        return data;
+                    }
+                }
+            ]
+        });
+    }
+    
     if (_TEMP['table-capasfaccion'] === undefined && document.getElementById('table-capasfaccion')) {
         var i = 0;
         _TEMP['table-capasfaccion'] = DT_init('table-capasfaccion', {
@@ -105,8 +183,9 @@ function initTableCapasFacciones(){
                 }
             ]
         });
-        profitcapasf();
     }
+    
+    profitcapasf();
 }
 
 function number_format(number, decimals, dec_point, thousands_sep) {
